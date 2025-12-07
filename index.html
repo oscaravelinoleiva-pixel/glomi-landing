@@ -1,0 +1,304 @@
+<!--
+  Archivo: index.html
+  Sitio estático para GLOMI - plantilla responsive y accesible
+  Instrucciones: guardar como index.html y subir a cualquier hosting estático
+  (GitHub Pages, Netlify, Vercel, Surge, S3, etc.).
+-->
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="GLOMI - Soluciones tecnológicas y servicios profesionales. Innovación, calidad y confianza." />
+  <title>GLOMI — Soluciones tecnológicas</title>
+
+  <!-- Google Fonts (opcional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0f1724; /* dark navy */
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#00b4d8;
+      --glass: rgba(255,255,255,0.04);
+      --radius:14px;
+      --max-w:1100px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background:linear-gradient(180deg,var(--bg), #07101a 80%);
+      color:#e6eef6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:32px 16px;
+    }
+    .container{max-width:var(--max-w);margin:0 auto}
+
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#6de);display:flex;align-items:center;justify-content:center;font-weight:700}
+    .logo span{font-size:20px;color:#021018}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    nav a:hover{color:var(--accent)}
+
+    .hero{display:grid;grid-template-columns:1fr;gap:22px;align-items:center;margin-bottom:36px}
+    @media(min-width:880px){.hero{grid-template-columns:1fr 420px}}
+
+    .card{background:linear-gradient(180deg,var(--card), rgba(10,17,25,0.6));border-radius:var(--radius);padding:28px;box-shadow:0 8px 30px rgba(3,8,15,0.6)}
+
+    .eyebrow{color:var(--accent);font-weight:700;font-size:13px;margin-bottom:10px}
+    h1{margin:0 0 12px 0;font-size:28px}
+    p.lead{color:var(--muted);margin:0 0 18px}
+
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#66e6ff);color:#012029}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    .features{display:grid;grid-template-columns:repeat(1,1fr);gap:12px;margin-top:18px}
+    @media(min-width:640px){.features{grid-template-columns:repeat(2,1fr)}}
+    .feature{padding:14px;border-radius:10px;background:var(--glass);border:1px solid rgba(255,255,255,0.02)}
+    .feature h4{margin:0 0 6px}
+    .feature p{margin:0;color:var(--muted);font-size:14px}
+
+    /* Right column demo card */
+    .showcase{display:flex;flex-direction:column;gap:12px}
+    .mock{height:260px;border-radius:12px;background:linear-gradient(180deg,#031224 0%, #052032 100%);display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600}
+
+    section{margin-bottom:26px}
+    .grid-3{display:grid;grid-template-columns:1fr;gap:12px}
+    @media(min-width:880px){.grid-3{grid-template-columns:1fr 1fr 1fr}}
+    .service{padding:18px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border:1px solid rgba(255,255,255,0.03)}
+    .service h3{margin:0 0 8px}
+    .service p{margin:0;color:var(--muted);font-size:14px}
+
+    .contact-grid{display:grid;grid-template-columns:1fr;gap:12px}
+    @media(min-width:880px){.contact-grid{grid-template-columns:1fr 360px}}
+    form label{display:block;font-size:13px;margin-bottom:6px}
+    input[type=text],input[type=email],textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+    textarea{min-height:120px}
+
+    footer{color:var(--muted);font-size:14px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.02);margin-top:20px}
+
+    .small{font-size:13px;color:var(--muted)}
+
+    /* Utilities */
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);font-weight:700;color:var(--accent);}
+
+  
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    animation: glomiBackground 40s infinite alternate ease-in-out; transition: background-image 5s ease-in-out;
+    background-size: cover;
+    background-position: center;
+}
+
+@keyframes glomiBackground {
+    0% {
+        background-image: linear-gradient(to bottom right, #0a0f24, #162850), url('futuro.jpg');
+    }
+    20% {
+        background-image: linear-gradient(to bottom right, #0a0f24, #162850), url('futuro.jpg');
+    }
+    25% {
+        background-image: linear-gradient(to bottom right, #001f3f, #003f7f), url('tecnologia.jpg');
+    }
+    45% {
+        background-image: linear-gradient(to bottom right, #001f3f, #003f7f), url('tecnologia.jpg');
+    }
+    50% {
+        background-image: linear-gradient(to bottom right, #003f5c, #2f4b7c), url('innovacion.jpg');
+    }
+    70% {
+        background-image: linear-gradient(to bottom right, #003f5c, #2f4b7c), url('innovacion.jpg');
+    }
+    75% {
+        background-image: linear-gradient(to bottom right, #1a2a6c, #b21f1f);
+    }
+    90% {
+        background-image: linear-gradient(to bottom right, #1a2a6c, #b21f1f);
+    }
+    100% {
+        background-image: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+    }
+}
+
+
+/* Fondo animado con imágenes generadas */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  animation: glomiBackground 40s infinite alternate ease-in-out;
+  opacity: 0.55;
+}
+
+@keyframes glomiBackground {
+  0% {
+    background-image: linear-gradient(to bottom right, #0a0f24, #162850), url('futuro.jpg');
+  }
+  25% {
+    background-image: linear-gradient(to bottom right, #001f3f, #003f7f), url('tecnologia.jpg');
+  }
+  50% {
+    background-image: linear-gradient(to bottom right, #003f5c, #2f4b7c), url('innovacion.jpg');
+  }
+  75% {
+    background-image: linear-gradient(to bottom right, #1a2a6c, #b21f1f), url('union.jpg');
+  }
+  100% {
+    background-image: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364), url('respeto.jpg');
+  }
+}
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"><span>G</span></div>
+        <div>
+          <div style="font-weight:700">GLOMI</div>
+          <div class="small">Soluciones tecnológicas</div>
+        </div>
+      </div>
+
+      <nav aria-label="Navegación principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="card">
+          <div class="eyebrow">Innovación • Confianza • Resultados</div>
+          <h1>Transformamos ideas en soluciones tecnológicas</h1>
+          <p class="lead">GLOMI entrega servicios integrales en desarrollo de software, sistemas embebidos, integración y mantenimiento — diseñados para hacer crecer tu negocio.</p>
+
+          <div class="cta-row">
+        
+            <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
+          </div>
+
+          <div class="features" aria-hidden="false">
+            <div class="feature">
+              <h4>Productos a medida</h4>
+              <p>Desarrollo y entrega de soluciones según requisitos y plazos acordados.</p>
+            </div>
+            <div class="feature">
+              <h4>Soporte y mantenimiento</h4>
+              <p>Contratos de soporte con monitoreo y respuesta prioritaria.</p>
+            </div>
+            <div class="feature">
+              <h4>Integración IoT</h4>
+              <p>Conectividad segura, recolección de datos y dashboards para toma de decisiones.</p>
+            </div>
+            <div class="feature">
+              <h4>Consultoría técnica</h4>
+              <p>Arquitectura, migraciones y optimización de sistemas existentes.</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="showcase">
+          
+          <div class="card">
+            <h3 style="margin-top:0">¿Por qué elegir GLOMI?</h3>
+            <p class="small" style="margin-bottom:8px">Equipo multidisciplinario, entrega puntual y enfoque en resultados medibles.</p>
+            <ul class="small" style="margin:0;padding-left:18px;color:var(--muted)">
+              <li>Metodologías ágiles</li>
+              <li>Control de calidad (unit & integration tests)</li>
+              <li>Documentación y transferencia técnica</li>
+            </ul>
+          </div>
+        </aside>
+      </section>
+
+      <section id="servicios" class="card">
+        <h2 style="margin-top:0">Servicios</h2>
+        <div class="grid-3">
+          <div class="service" aria-labelledby="s1"><h3 id="s1">Desarrollo Web & Apps</h3><p>Aplicaciones web responsivas, PWA, APIs y portales corporativos.</p></div>
+          <div class="service" aria-labelledby="s2"><h3 id="s2">Sistemas Embebidos</h3><p>Diseño firmware, integración de hardware y optimización para microcontroladores.</p></div>
+          <div class="service" aria-labelledby="s3"><h3 id="s3">Data & Analytics</h3><p>Dashboards, ETL y analítica para convertir datos en decisiones.</p></div>
+          <div class="service" aria-labelledby="s4"><h3 id="s4">Automatización Industrial</h3><p>Control y monitoreo, PLC/SCADA y modernización de plantas.</p></div>
+          <div class="service" aria-labelledby="s5"><h3 id="s5">IoT & Conectividad</h3><p>Gateways, sensores, comunicación segura y gestión de dispositivos.</p></div>
+          <div class="service" aria-labelledby="s6"><h3 id="s6">Consultoría Técnica</h3><p>Auditorías, arquitectura y planes de mejora a la medida.</p></div>
+        </div>
+      </section>
+
+      <section id="nosotros">
+        <div class="card">
+          <h2 style="margin-top:0">Nosotros</h2>
+          <p class="small">GLOMI es un equipo de ingenieros y desarrolladores con experiencia en proyectos industriales y digitales. Trabajamos con clientes de distintas industrias mostrando foco en eficiencia y escalabilidad.</p>
+
+          <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap">
+            <div class="pill">Experiencia</div>
+            <div class="pill">Confidencialidad</div>
+            <div class="pill">Entrega ágil</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="card">
+        <h2 style="margin-top:0">Contacto</h2>
+        <div class="contact-grid">
+          <div>
+            
+
+            <div style="margin-top:14px" class="small">
+              <strong>Tel, WhatsApp:</strong> +56 9 9053 6077<br>
+              <strong>Dirección:</strong> Hijuelas, Chile.
+            </div>
+          </div>
+
+         
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <div class="small">© <strong>GLOMI</strong> <span id="year"></span>. Todos los derechos reservados.</div>
+        <div class="small">Síguenos: <a href="#" style="color:var(--muted);text-decoration:underline">LinkedIn</a> • <a href="#" style="color:var(--muted);text-decoration:underline">Twitter</a></div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Small accessibility helper: skip to content
+    (function(){
+      var skip = document.createElement('a');
+      skip.href='#';
+      skip.textContent='Ir al contenido';
+      skip.style.position='absolute';
+      skip.style.left='-9999px';
+      skip.style.top='auto';
+      skip.style.width='1px';
+      skip.style.height='1px';
+      skip.style.overflow='hidden';
+      skip.addEventListener('focus',function(){this.style.left='16px';this.style.top='16px';this.style.width='auto';this.style.height='auto';});
+      skip.addEventListener('blur',function(){this.style.left='-9999px'});
+      document.body.insertBefore(skip, document.body.firstChild);
+    })();
+  </script>
+</body>
+</html>
