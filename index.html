@@ -1,170 +1,180 @@
-<!--
-  Archivo: index.html (versión corporativa optimizada)
-  Sitio estático para GLOMI — Estilo corporativo profesional
--->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="GLOMI — Soluciones tecnológicas profesionales para empresas: desarrollo web, automatización, firmware embebido, IoT y soporte técnico especializado.">
-  <meta name="author" content="GLOMI">
-  <meta property="og:title" content="GLOMI — Soluciones Tecnológicas">
-  <meta property="og:description" content="Desarrollo web corporativo, sistemas embebidos, ingeniería electrónica e IoT.">
-  <meta property="og:image" content="img/preview.png">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://tudominio.cl">
-  <title>GLOMI — Soluciones Tecnológicas Corporativas</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="GLOMI — Portafolio de servicios profesionales en ingeniería, mantenimiento y soluciones digitales." />
+  <title>GLOMI — Servicios profesionales</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
-    /* -------------------- RESET -------------------- */
-    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;}
-    html{scroll-behavior:smooth;} body{background:#f4f6f8;color:#333;line-height:1.6;}
+    :root{--bg:#071026;--card:#0b1220;--muted:#9aa4b2;--accent:#00b4d8;--radius:12px;--max-w:1100px;color-scheme:dark}
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,Arial;background:linear-gradient(180deg,var(--bg),#021022 80%);color:#e6eef6;padding:28px}
+    .container{max-width:var(--max-w);margin:0 auto}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:26px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#66e6ff);display:flex;align-items:center;justify-content:center;font-weight:800;color:#012029}
+    nav a{color:var(--muted);text-decoration:none;margin-left:16px;font-weight:600}
+    nav a:hover{color:var(--accent)}
 
-    /* -------------------- HEADER -------------------- */
-    header{background:#0d1b2a;color:#fff;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 4px 20px rgba(0,0,0,0.2);}    
-    .logo{display:flex;align-items:center;gap:12px;}
-    .logo-icon{width:48px;height:48px;border-radius:12px;background:#1b263b;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:bold;color:#e0e1dd;}
-    nav a{margin:0 15px;color:#e0e1dd;text-decoration:none;font-weight:600;font-size:15px;}    
-    nav a:hover{color:#fff;}
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;align-items:center;margin-bottom:28px}
+    @media(min-width:880px){.hero{grid-template-columns:1fr 420px}}
+    .card{background:linear-gradient(180deg,var(--card),rgba(10,17,25,0.55));border-radius:var(--radius);padding:26px;box-shadow:0 10px 30px rgba(2,6,12,0.6)}
+    .eyebrow{color:var(--accent);font-weight:700;font-size:13px;margin-bottom:10px}
+    h1{margin:0 0 10px 0;font-size:26px}
+    p.lead{color:var(--muted);margin:0 0 16px}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#66e6ff);color:#012029}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
 
-    /* -------------------- HERO -------------------- */
-    .hero{padding:120px 40px;text-align:center;background:linear-gradient(135deg,#1b263b,#0d1b2a);color:#fff;}
-    .hero h1{font-size:48px;margin-bottom:20px;font-weight:800;}
-    .hero p{font-size:20px;max-width:700px;margin:auto;opacity:.9;}
-    .btn-primary{display:inline-block;margin-top:30px;padding:14px 28px;border-radius:8px;background:#415a77;color:#fff;font-weight:bold;text-decoration:none;font-size:16px;box-shadow:0 4px 12px rgba(0,0,0,.3);}    
-    .btn-primary:hover{background:#517195;}
+    .services-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:16px}
+    @media(min-width:880px){.services-grid{grid-template-columns:repeat(2,1fr)}}
+    .service{padding:16px;border-radius:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03)}
+    .service h3{margin:0 0 8px}
+    .service p{margin:0;color:var(--muted)}
 
-    /* -------------------- SECCIÓN CORPORATIVA -------------------- */
-    section{padding:80px 40px;max-width:1100px;margin:auto;}
+    .contact-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:12px}
+    @media(min-width:880px){.contact-grid{grid-template-columns:1fr 360px}}
+    form label{display:block;font-size:13px;margin-bottom:6px}
+    input[type=text],input[type=email],textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+    textarea{min-height:120px}
+    footer{color:var(--muted);font-size:14px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.02);margin-top:22px}
 
-    h2{text-align:center;font-size:34px;margin-bottom:50px;color:#0d1b2a;}
+    .small{font-size:13px;color:var(--muted)}
 
-    .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);font-weight:700;color:var(--accent)}
 
-    .card{background:#fff;padding:30px;border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,0.08);border-left:6px solid #415a77;transition:.3s;}
-    .card:hover{transform:translateY(-5px);box-shadow:0 10px 28px rgba(0,0,0,0.15);}    
-    .card h3{color:#0d1b2a;margin-bottom:10px;font-size:22px;}
+    /* accessibility focus */
+    a:focus,button:focus,input:focus,select:focus,textarea:focus{outline:3px solid rgba(0,180,216,0.18);outline-offset:2px}
 
-    /* -------------------- PORTAFOLIO -------------------- */
-    .portfolio-item{background:#fff;padding:25px;border-radius:14px;box-shadow:0 6px 20px rgba(0,0,0,0.08);}    
-    .portfolio-item h4{margin-bottom:10px;color:#1b263b;}
-
-    /* -------------------- CONTACTO -------------------- */
-    form{background:#fff;padding:30px;border-radius:16px;box-shadow:0 8px 25px rgba(0,0,0,0.1);max-width:600px;margin:auto;}    
-    label{font-weight:600;margin:10px 0 4px;display:block;color:#0d1b2a;}    
-    input,textarea{width:100%;padding:12px;margin-bottom:15px;border:1px solid #c9d1d9;border-radius:8px;font-size:15px;}    
-    textarea{height:130px;resize:none;}    
-    button{padding:12px 22px;border:none;background:#1b263b;color:#fff;font-size:16px;border-radius:8px;cursor:pointer;}    
-    button:hover{background:#415a77;}
-
-    /* -------------------- FOOTER -------------------- */
-    footer{margin-top:60px;background:#0d1b2a;padding:25px;text-align:center;color:#e0e1dd;font-size:14px;}  
-
-    /* -------------------- WHATSAPP -------------------- */
-    .btn-whatsapp{position:fixed;bottom:25px;right:25px;width:64px;height:64px;background:#25D366 url('img/whatsapp.svg') center/60% no-repeat;border-radius:50%;box-shadow:0 4px 20px rgba(0,0,0,.4);z-index:999;}  
   </style>
 </head>
-
 <body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">G</div>
+        <div>
+          <div style="font-weight:800">GLOMI</div>
+          <div class="small">Soluciones técnicas integrales</div>
+        </div>
+      </div>
+      <nav aria-label="Navegación principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
 
-<header>
-  <div class="logo">
-    <div class="logo-icon">G</div>
-    <h1>GLOMI</h1>
+    <main>
+      <section class="hero">
+        <div class="card">
+          <div class="eyebrow">Servicios profesionales</div>
+          <h1>Soluciones técnicas para industria, energía y transporte</h1>
+          <p class="lead">Equipo especializado que entrega servicios integrales en ingeniería, mantenimiento, operación y desarrollo digital. Enfoque en seguridad, eficiencia y continuidad operacional.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#contacto">Solicitar propuesta</a>
+            <a class="btn btn-ghost" href="#servicios">Ver portafolio</a>
+          </div>
+        </div>
+
+        <aside class="card" aria-hidden="false">
+          <h3 style="margin-top:0">Propuesta de valor</h3>
+          <p class="small" style="margin-bottom:8px">Resolvemos necesidades técnicas complejas con soluciones prácticas y equipos certificados, garantizando continuidad operativa y seguridad.</p>
+          <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
+            <div class="pill">Seguridad</div>
+            <div class="pill">Ejecución</div>
+            <div class="pill">Multidisciplinario</div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="servicios" class="card">
+        <h2 style="margin-top:0">Portafolio de Servicios</h2>
+        <div class="services-grid">
+          <div class="service"><h3>Ingeniería y Automatización</h3><p>Desarrollo e implementación de soluciones para control, monitoreo y modernización de equipos y procesos.</p></div>
+          <div class="service"><h3>Mantenimiento y Reparación</h3><p>Servicios de mantenimiento preventivo y correctivo para equipos, maquinaria y vehículos.</p></div>
+          <div class="service"><h3>Servicios para Flotas</h3><p>Gestión técnica, diagnóstico y soporte para flotas de transporte y equipos industriales.</p></div>
+          <div class="service"><h3>Energía y Sistemas Autónomos</h3><p>Soluciones en energía distribuida, instalaciones solares y sistemas de respaldo energético.</p></div>
+          <div class="service"><h3>Desarrollo Web y Automatización Digital</h3><p>Creación de plataformas web operativas, integración de pagos, automatización de flujos y generación de documentación digital.</p></div>
+          <div class="service"><h3>Capacitación Técnica</h3><p>Programas de formación para equipos operativos y técnicos en operaciones, seguridad y herramientas técnicas.</p></div>
+        </div>
+      </section>
+
+      <section id="nosotros" style="margin-top:18px">
+        <div class="card">
+          <h2 style="margin-top:0">Nosotros</h2>
+          <p class="small">GLOMI entrega servicios técnicos profesionales para proyectos industriales, de energía y transporte. Operamos con estándares de seguridad y procedimientos que garantizan calidad en la ejecución y continuidad operativa para nuestros clientes.</p>
+          <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap">
+            <div class="pill">Industria</div>
+            <div class="pill">Energía</div>
+            <div class="pill">Transporte</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="card" style="margin-top:18px">
+        <h2 style="margin-top:0">Contacto</h2>
+        <div class="contact-grid">
+          <div>
+            <p class="small">Solicita una propuesta describiendo tu proyecto o necesidad. Un representante del equipo te contactará para coordinar alcance, tiempos y presupuesto.</p>
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLScRIYUSBz7jRD9M4Km50-NHvzs7Dd4Q8W9VdBNBZKkhbXq97w/formResponse" method="POST">
+              <label>Empresa / Nombre</label>
+              <input type="text" name="entry.1997813448" required>
+
+              <label>Correo electrónico</label>
+              <input type="email" name="entry.1318391296" required>
+
+              <label>Teléfono</label>
+              <input type="text" name="entry.969338628">
+
+              <label>Servicio de interés</label>
+              <select name="entry.1324851027">
+                <option>Mantenimiento</option>
+                <option>Instalación</option>
+                <option>Automatización</option>
+                <option>Desarrollo Web</option>
+                <option>Capacitación</option>
+              </select>
+
+              <label>Descripción breve</label>
+              <textarea name="entry.1949093150"></textarea>
+
+              <div style="margin-top:12px">
+                <button class="btn btn-primary" type="submit">Enviar solicitud</button>
+              </div>
+            </form>
+
+            <div style="margin-top:14px" class="small">
+              <strong>Tel/WhatsApp:</strong> +56 9 XXXX XXXX<br>
+              <strong>Ubicación:</strong> Región de Valparaíso, Chile
+            </div>
+          </div>
+
+          <div>
+            <div class="card" style="height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center">
+              <h3 style="margin:0 0 8px">¿Listo para comenzar?</h3>
+              <p class="small" style="margin:0 0 16px">Envíanos los detalles de tu proyecto y diseñaremos una propuesta con alcance, tiempos y presupuesto.</p>
+              <a class="btn btn-ghost" href="#contacto">Enviar solicitud</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <div class="small">© <strong>GLOMI</strong> <span id="year"></span>. Todos los derechos reservados.</div>
+        <div class="small">Síguenos: <a href="#" style="color:var(--muted);text-decoration:underline">LinkedIn</a> • <a href="#" style="color:var(--muted);text-decoration:underline">Twitter</a></div>
+      </div>
+    </footer>
   </div>
-  <nav>
-    <a href="#servicios">Servicios</a>
-    <a href="#portafolio">Portafolio</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-</header>
 
-<section class="hero">
-  <h1>Transformamos ideas en soluciones tecnológicas Corporativas</h1>
-  <p>Servicios de ingeniería electrónica, IoT, servicios integrales en desarrollo de software, desarrollo web empresarial y automatización  sistemas embebidos, integración y mantenimiento para compañías que requieren calidad, precisión y soporte profesional.</p>
-  <a class="btn-primary" href="#contacto">Solicitar Cotización</a>
-</section>
-
-<section id="servicios">
-  <h2>Servicios Profesionales</h2>
-  <div class="grid-3">
-    <div class="card">
-      <h3>Desarrollo Web Corporativo</h3>
-      <p>Sitios, intranets, automatización de documentos, pasarelas de pago, integraciones y plataformas empresariales.</p>
-    </div>
-    <div class="card">
-      <h3>IoT y Firmware</h3>
-      <p>STM32, ESP32, sensores industriales, telemetría, control PID, dataloggers y comunicación inalámbrica.</p>
-    </div>
-    <div class="card">
-      <h3>Automatización y Electrónica</h3>
-      <p>Controladores, sistemas de energía, PFC, inversores, PLC, reparación técnica avanzada y diseño electrónico.</p>
-    </div>
-  </div>
-</section>
-
-<section id="portafolio">
-  <h2>Portafolio</h2>
-  <div class="grid-3">
-    <div class="portfolio-item">
-      <h4>Datalogger Industrial STM32</h4>
-      <p>Monitoreo de carga de baterías con TFT e interfaz PC.</p>
-    </div>
-    <div class="portfolio-item">
-      <h4>Generador Inverter Modificado</h4>
-      <p>Control de RPM con servo y EGS002, integración PFC.</p>
-    </div>
-    <div class="portfolio-item">
-      <h4>Plataforma Web con Órdenes Automáticas</h4>
-      <p>Genera PDFs, agenda, WhatsApp y pagos integrados.</p>
-    </div>
-  </div>
-</section>
-
-<section id="contacto">
-  <h2>Contacto</h2>
-<h2>Solicitud de Servicio</h2>
-
-<form action="" 
-      method="POST" 
-      target="_self">
-
-    <label>Nombre completo</label><br>
-    <input type="text" name="entry.1997813448" required><br><br>
-
-    <label>Correo electrónico</label><br>
-    <input type="email" name="entry.1318391296" required><br><br>
-
-    <label>Teléfono</label><br>
-    <input type="text" name="entry.969338628" required><br><br>
-
-    <label>Dirección</label><br>
-    <input type="text" name="entry.1915333678" required><br><br>
-
-    <label>Servicio solicitado</label><br>
-    <select name="entry.1324851027" required>
-        <option value="Mantención">Mantención</option>
-        <option value="Reparación">Reparación</option>
-        <option value="Instalación">Instalación</option>
-        <option value="Garantía">Garantía</option>
-    </select><br><br>
-
-    <label>Descripción del trabajo</label><br>
-    <textarea name="entry.1949093150" required></textarea><br><br>
-
-    <button type="submit">Enviar</button>
-</form>
-</section>
-
-<footer>
-  © 2025 GLOMI — Soluciones Tecnológicas Corporativas
-</footer>
-
-<a href="https://wa.me/569XXXXXXXX" class="btn-whatsapp" aria-label="WhatsApp GLOMI"></a>
-
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
-
-
-
