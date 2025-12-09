@@ -48,7 +48,62 @@
 
     /* accessibility focus */
     a:focus,button:focus,input:focus,select:focus,textarea:focus{outline:3px solid rgba(0,180,216,0.18);outline-offset:2px}
+    .form-container {
+        background: white;
+        width: 100%;
+        max-width: 450px;
+        padding: 25px 35px;
+        border-radius: 12px;
+        box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+    }
 
+    h2 {
+        margin-top: 0;
+        font-size: 24px;
+        font-weight: bold;
+        color: #1f2937;
+        text-align: center;
+    }
+
+    label {
+        display: block;
+        margin-top: 15px;
+        font-weight: bold;
+        color: #374151;
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 12px;
+        margin-top: 6px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 15px;
+        box-sizing: border-box;
+    }
+
+    textarea {
+        height: 120px;
+        resize: vertical;
+    }
+
+    button {
+        width: 100%;
+        background: #2563eb;
+        border: none;
+        color: white;
+        padding: 14px;
+        margin-top: 20px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    button:hover {
+        background: #1e40af;
+    }
   </style>
 </head>
 <body>
@@ -120,33 +175,32 @@
         <div class="contact-grid">
           <div>
             <p class="small">Solicita una propuesta describiendo tu proyecto o necesidad. Un representante del equipo te contactará para coordinar alcance, tiempos y presupuesto.</p>
-            <form action="https://docs.google.com/forms/d/e/1FAIpQLScRIYUSBz7jRD9M4Km50-NHvzs7Dd4Q8W9VdBNBZKkhbXq97w/formResponse" method="POST">
-              <label>Empresa / Nombre</label>
-              <input type="text" name="entry.1997813448" required>
+           <div class="form-container">
+    <h2>Contáctanos</h2>
 
-              <label>Correo electrónico</label>
-              <input type="email" name="entry.1318391296" required>
+    <form 
+        action="https://docs.google.com/forms/d/e/1FAIpQLScRIYUSBz7jRD9M4Km50-NHvzs7Dd4Q8W9VdBNBZKkhbXq97w/formResponse" 
+        method="POST" 
+        target="_blank">
 
-              <label>Teléfono</label>
-              <input type="text" name="entry.969338628">
+        <label>Nombre</label>
+        <input type="text" name="entry.616770728" placeholder="Tu nombre" required>
 
-              <label>Servicio de interés</label>
-              <select name="entry.1324851027">
-                <option>Mantenimiento</option>
-                <option>Instalación</option>
-                <option>Automatización</option>
-                <option>Desarrollo Web</option>
-                <option>Capacitación</option>
-              </select>
+        <label>Correo</label>
+        <input type="email" name="entry.1194134153" placeholder="correo@ejemplo.com" required>
 
-              <label>Descripción breve</label>
-              <textarea name="entry.1949093150"></textarea>
+        <label>Teléfono</label>
+        <input type="text" name="entry.1620714692" placeholder="+56 9 XXXXXXXX" required>
 
-              <div style="margin-top:12px">
-                <button class="btn btn-primary" type="submit">Enviar solicitud</button>
-              </div>
-            </form>
+        <label>Servicio requerido</label>
+        <input type="text" name="entry.87627891" placeholder="Ej: Mantenimiento eléctrico" required>
 
+        <label>Mensaje</label>
+        <textarea name="entry.212002692" placeholder="Escribe tu mensaje..." required></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+</div>
             <div style="margin-top:14px" class="small">
               <strong>Tel/WhatsApp:</strong> +56 9 XXXX XXXX<br>
               <strong>Ubicación:</strong> Región de Valparaíso, Chile
@@ -178,3 +232,4 @@
   </script>
 </body>
 </html>
+
