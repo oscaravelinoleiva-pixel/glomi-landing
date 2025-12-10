@@ -50,6 +50,9 @@
     textarea {height: 120px;resize: vertical;}
     button {width: 100%;background: #2563eb;border: none;color: white;padding: 14px;margin-top: 20px;border-radius: 8px;font-size: 16px;font-weight: bold;cursor: pointer;transition: 0.2s;}
     button:hover {background: #1e40af;}
+     /* -------------------- WHATSAPP -------------------- */
+    .btn-whatsapp{position:fixed;bottom:25px;right:25px;width:64px;height:64px;background:#25D366 url('img/whatsapp.svg') center/60% no-repeat;border-radius:50%;box-shadow:0 4px 20px rgba(0,0,0,.4);z-index:999;}  
+  
   </style>
 </head>
 <body>
@@ -168,9 +171,11 @@
     <footer>
       <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
         <div class="small">© <strong>GLOMI</strong> <span id="year"></span>. Todos los derechos reservados.</div>
+        
         <div class="small">Síguenos: <a href="#" style="color:var(--muted);text-decoration:underline">LinkedIn</a> • <a href="#" style="color:var(--muted);text-decoration:underline">Twitter</a></div>
       </div>
     </footer>
+    <a href="https://wa.me/569XXXXXXXX" class="btn-whatsapp" aria-label="WhatsApp GLOMI"></a>
   </div>
 
   <script>
@@ -178,5 +183,6 @@
   </script>
 </body>
 </html>
+
 
 
