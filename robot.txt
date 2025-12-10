@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://glomi.cl/sitemap.xml
