@@ -1,191 +1,307 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="robots" content="index, follow">
-  <meta name="description" content="GLOMI — Portafolio de servicios profesionales en ingeniería, mantenimiento industrial y soluciones digitales." />
-  <title>Gestión Logística y Mantención Industrial GLOMI Spa.</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{--bg:#071026;--card:#0b1220;--muted:#9aa4b2;--accent:#00b4d8;--radius:12px;--max-w:1100px;color-scheme:dark}
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,Arial;background:linear-gradient(180deg,var(--bg),#021022 80%);color:#e6eef6;padding:28px}
-    .container{max-width:var(--max-w);margin:0 auto}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:26px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:70px;height:70px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#66e6ff);display:flex;align-items:center;justify-content:center;font-weight:center;color:#012029}
-    nav a{color:var(--muted);text-decoration:none;margin-left:16px;font-weight:600}
-    nav a:hover{color:var(--accent)}
-    .hero{display:grid;grid-template-columns:1fr;gap:18px;align-items:center;margin-bottom:28px}
-    @media(min-width:880px){.hero{grid-template-columns:1fr 420px}}
-    .card{background:linear-gradient(180deg,var(--card),rgba(10,17,25,0.55));border-radius:var(--radius);padding:26px;box-shadow:0 10px 30px rgba(2,6,12,0.6)}
-    .eyebrow{color:var(--accent);font-weight:700;font-size:13px;margin-bottom:10px}
-    h1{margin:0 0 10px 0;font-size:26px}
-    p.lead{color:var(--muted);margin:0 0 16px}
-    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
-    .btn-primary{background:linear-gradient(90deg,var(--accent),#66e6ff);color:#012029}
-    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
-    .services-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:16px}
-    @media(min-width:880px){.services-grid{grid-template-columns:repeat(2,1fr)}}
-    .service{padding:16px;border-radius:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03)}
-    .service h3{margin:0 0 8px}
-    .service p{margin:0;color:var(--muted)}
-    .contact-grid{display:grid;grid-template-columns:1fr;gap:12px;margin-top:12px}
-    @media(min-width:880px){.contact-grid{grid-template-columns:1fr 360px}}
-    form label{display:block;font-size:13px;margin-bottom:6px}
-    input[type=text],input[type=email],textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
-    textarea{min-height:120px}
-    footer{color:var(--muted);font-size:14px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.02);margin-top:22px}
-    .small{font-size:13px;color:var(--muted)}
-    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);font-weight:700;color:var(--accent)}
-    /* accessibility focus */
-    a:focus,button:focus,input:focus,select:focus,textarea:focus{outline:3px solid rgba(0,180,216,0.18);outline-offset:2px}
-    .form-container {background: white;width: 100%;max-width: 450px;padding: 25px 35px;border-radius: 12px;box-shadow: 0px 8px 20px rgba(0,0,0,0.1);}
-    h2 {margin-top: 0;font-size: 24px;font-weight: bold;color: #1f2937;text-align: center;}
-    label {display: block;margin-top: 15px;font-weight: bold;color: #374151;}
-    input, textarea {width: 100%;padding: 12px;margin-top: 6px;border: 1px solid #ccc;border-radius: 8px;font-size: 15px;box-sizing: border-box;}
-    textarea {height: 120px;resize: vertical;}
-    button {width: 100%;background: #2563eb;border: none;color: white;padding: 14px;margin-top: 20px;border-radius: 8px;font-size: 16px;font-weight: bold;cursor: pointer;transition: 0.2s;}
-    button:hover {background: #1e40af;}
-     /* -------------------- WHATSAPP -------------------- */
-    .btn-whatsapp{position:fixed;bottom:25px;right:25px;width:64px;height:64px;background:#25D366 url('img/whatsapp.svg') center/60% no-repeat;border-radius:50%;box-shadow:0 4px 20px rgba(0,0,0,.4);z-index:999;}  
-  
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Gestión Logística y Mantención Industrial GLOMI SpA</title>
+
+<meta name="robots" content="index, follow">
+<meta name="author" content="Gestión Logística y Mantención Industrial GLOMI SpA">
+<meta name="description" content="GLOMI SpA presta servicios de logística, transporte de carga, ingeniería multidisciplinaria, mantención industrial, obras, soluciones digitales y gestión de proyectos en Chile y el extranjero.">
+<meta name="keywords" content="logística industrial, transporte de carga, mantención industrial, ingeniería eléctrica, ingeniería mecánica, obras industriales, automatización, servicios técnicos, GLOMI">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--bg:#071026;
+--card:#0b1220;
+--muted:#9aa4b2;
+--accent:#00b4d8;
+--radius:12px;
+--max-w:1100px;
+color-scheme:dark
+}
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:Inter,system-ui,Arial;
+background:linear-gradient(180deg,var(--bg),#021022 80%);
+color:#e6eef6;
+padding:28px
+}
+.container{max-width:var(--max-w);margin:auto}
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:16px;
+margin-bottom:28px
+}
+.brand{display:flex;gap:12px;align-items:center}
+.logo{
+width:70px;height:70px;
+border-radius:12px;
+background:linear-gradient(135deg,var(--accent),#66e6ff);
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:800;
+color:#012029
+}
+nav a{
+color:var(--muted);
+margin-left:16px;
+text-decoration:none;
+font-weight:600
+}
+nav a:hover{color:var(--accent)}
+
+.card{
+background:linear-gradient(180deg,var(--card),rgba(10,17,25,.55));
+border-radius:var(--radius);
+padding:26px;
+margin-bottom:18px;
+box-shadow:0 10px 30px rgba(0,0,0,.5)
+}
+
+h1,h2,h3{margin-top:0}
+.small{color:var(--muted);font-size:14px}
+.lead{color:var(--muted)}
+
+.hero{
+display:grid;
+grid-template-columns:1fr;
+gap:18px
+}
+@media(min-width:900px){
+.hero{grid-template-columns:1fr 420px}
+}
+
+.btn{
+padding:10px 14px;
+border-radius:10px;
+font-weight:700;
+border:0;
+cursor:pointer;
+display:inline-block
+}
+.btn-primary{
+background:linear-gradient(90deg,var(--accent),#66e6ff);
+color:#012029
+}
+.btn-ghost{
+background:transparent;
+border:1px solid rgba(255,255,255,.08);
+color:var(--muted)
+}
+.btn-ghost:hover{color:var(--accent)}
+
+.services-grid{
+display:grid;
+grid-template-columns:1fr;
+gap:12px
+}
+@media(min-width:900px){
+.services-grid{grid-template-columns:repeat(2,1fr)}
+}
+.service{
+background:rgba(255,255,255,.03);
+border:1px solid rgba(255,255,255,.05);
+border-radius:10px;
+padding:16px
+}
+
+.form-container{
+background:#fff;
+color:#000;
+border-radius:12px;
+padding:24px
+}
+.form-container h3{margin-top:0}
+.form-container input,
+.form-container textarea{
+width:100%;
+padding:10px;
+margin-bottom:12px;
+border-radius:8px;
+border:1px solid #ccc
+}
+.form-container button{
+background:#2563eb;
+color:#fff;
+border:0;
+padding:12px;
+border-radius:8px;
+font-weight:700;
+cursor:pointer
+}
+.form-container button:hover{background:#1e40af}
+
+footer{
+border-top:1px solid rgba(255,255,255,.05);
+padding-top:16px;
+margin-top:24px
+}
+
+.btn-whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+width:64px;
+height:64px;
+background:#25D366 url('img/whatsapp.svg') center/60% no-repeat;
+border-radius:50%;
+z-index:999;
+box-shadow:0 6px 20px rgba(0,0,0,.5)
+}
+</style>
 </head>
+
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo" aria-hidden="true">GLOMI Spa.</div>
-        <div>
-          <div style="font-weight:800">Gestión Logística y Mantención Industrial GLOMI Spa.</div>
-          <div class="small">Soluciones técnicas integrales</div>
-        </div>
-      </div>
-      <nav aria-label="Navegación principal">
-        <a href="#servicios">Servicios</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-    </header>
+<div class="container">
 
-    <main>
-      <section class="hero">
-        <div class="card">
-          <div class="eyebrow">Servicios profesionales</div>
-          <h1>Soluciones técnicas para industria, energía y transporte</h1>
-          <p class="lead">Equipo especializado que entrega servicios integrales en ingeniería, mantenimiento, operación y desarrollo digital. Enfoque en seguridad, eficiencia y continuidad operacional.</p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="#contacto">Solicitar propuesta</a>
-            <a class="btn btn-ghost" href="#servicios">Ver portafolio</a>
-          </div>
-        </div>
-
-        <aside class="card" aria-hidden="false">
-          <h3 style="margin-top:0">Propuesta de valor</h3>
-          <p class="small" style="margin-bottom:8px">Resolvemos necesidades técnicas complejas con soluciones prácticas y equipos certificados, garantizando continuidad operativa y seguridad.</p>
-          <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
-            <div class="pill">Seguridad</div>
-            <div class="pill">Ejecución</div>
-            <div class="pill">Multidisciplinario</div>
-          </div>
-        </aside>
-      </section>
-
-      <section id="servicios" class="card">
-        <h2 style="margin-top:0">Portafolio de Servicios</h2>
-        <div class="services-grid">
-          <div class="service"><h3>Ingeniería y Automatización</h3><p>Desarrollo e implementación de soluciones para control, monitoreo y modernización de equipos y procesos.</p></div>
-          <div class="service"><h3>Mantenimiento y Reparación</h3><p>Servicios de mantenimiento preventivo y correctivo para equipos, maquinaria y vehículos.</p></div>
-          <div class="service"><h3>Servicios para Flotas</h3><p>Gestión técnica, diagnóstico y soporte para flotas de transporte y equipos industriales.</p></div>
-          <div class="service"><h3>Energía y Sistemas Autónomos</h3><p>Soluciones en energía distribuida, instalaciones solares y sistemas de respaldo energético.</p></div>
-          <div class="service"><h3>Desarrollo Web y Automatización Digital</h3><p>Creación de plataformas web operativas, integración de pagos, automatización de flujos y generación de documentación digital.</p></div>
-          <div class="service"><h3>Capacitación Técnica</h3><p>Programas de formación para equipos operativos y técnicos en operaciones, seguridad y herramientas técnicas.</p></div>
-        </div>
-      </section>
-
-      <section id="nosotros" style="margin-top:18px">
-        <div class="card">
-          <h2 style="margin-top:0">Nosotros</h2>
-          <p class="small">GLOMI entrega servicios técnicos profesionales para proyectos industriales, de energía y transporte. Operamos con estándares de seguridad y procedimientos que garantizan calidad en la ejecución y continuidad operativa para nuestros clientes.</p>
-          <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap">
-            <div class="pill">Industria</div>
-            <div class="pill">Energía</div>
-            <div class="pill">Transporte</div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contacto" class="card" style="margin-top:18px">
-        <h2 style="margin-top:0">Contacto</h2>
-        <div class="contact-grid">
-          <div>
-            <p class="small">Solicita una propuesta describiendo tu proyecto o necesidad. Un representante del equipo te contactará para coordinar alcance, tiempos y presupuesto.</p>
-           <div class="form-container">
-    <h2>Contáctanos</h2>
-
-    <form 
-        action="https://docs.google.com/forms/d/e/1FAIpQLScRIYUSBz7jRD9M4Km50-NHvzs7Dd4Q8W9VdBNBZKkhbXq97w/formResponse" 
-        method="POST" 
-        target="_blank">
-
-        <label>Nombre</label>
-        <input type="text" name="entry.616770728" placeholder="Tu nombre" required>
-
-        <label>Correo</label>
-        <input type="email" name="entry.1194134153" placeholder="correo@ejemplo.com" required>
-
-        <label>Teléfono</label>
-        <input type="text" name="entry.1620714692" placeholder="+56 9 XXXXXXXX" required>
-
-        <label>Servicio requerido</label>
-        <input type="text" name="entry.87627891" placeholder="Ej: Mantenimiento eléctrico" required>
-
-        <label>Mensaje</label>
-        <textarea name="entry.212002692" placeholder="Escribe tu mensaje..." required></textarea>
-
-        <button type="submit">Enviar</button>
-    </form>
+<header>
+<div class="brand">
+<div class="logo">GLOMI</div>
+<div>
+<strong>Gestión Logística y Mantención Industrial GLOMI SpA</strong>
+<div class="small">Servicios técnicos integrales</div>
 </div>
-            <div style="margin-top:14px" class="small">
-              <strong>Tel/WhatsApp:</strong> +56 9 XXXX XXXX<br>
-              <strong>Ubicación:</strong> Región de Valparaíso, Chile
-            </div>
-          </div>
+</div>
+<nav>
+<a href="#servicios">Servicios</a>
+<a href="#nosotros">Nosotros</a>
+<a href="#contacto">Contacto</a>
+</nav>
+</header>
 
-          <div>
-            <div class="card" style="height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center">
-              <h3 style="margin:0 0 8px">¿Listo para comenzar?</h3>
-              <p class="small" style="margin:0 0 16px">Envíanos los detalles de tu proyecto y diseñaremos una propuesta con alcance, tiempos y presupuesto.</p>
-              <a class="btn btn-ghost" href="#contacto">Enviar solicitud</a>
-            </div>
-          </div>
-        </div>
-      </section>
+<section class="hero">
+<div class="card">
+<h1>Soluciones técnicas, logísticas y de ingeniería</h1>
+<p class="lead">
+Prestamos servicios de logística, transporte, ingeniería, mantención industrial, obras,
+operación técnica, soluciones digitales y gestión de proyectos, en Chile y el extranjero.
+</p>
+<a href="#contacto" class="btn btn-primary">Solicitar propuesta</a>
+</div>
 
-    </main>
+<div class="card">
+<h3>Propuesta de valor</h3>
+<p class="small">
+Ejecutamos servicios con foco en seguridad, continuidad operacional y cumplimiento normativo,
+operando de forma directa o asociada a terceros.
+</p>
+</div>
+</section>
 
-    <footer>
-      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
-        <div class="small">© <strong>GLOMI</strong> <span id="year"></span>. Todos los derechos reservados.</div>
-        
-        <div class="small">Síguenos: <a href="#" style="color:var(--muted);text-decoration:underline">LinkedIn</a> • <a href="#" style="color:var(--muted);text-decoration:underline">Twitter</a></div>
-      </div>
-    </footer>
-    <a href="https://wa.me/569XXXXXXXX" class="btn-whatsapp" aria-label="WhatsApp GLOMI"></a>
-  </div>
+<section id="servicios" class="card">
+<h2>Portafolio de Servicios</h2>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px">
+<button class="btn btn-ghost" onclick="filtrar('all')">Todos</button>
+<button class="btn btn-ghost" onclick="filtrar('logistica')">Logística</button>
+<button class="btn btn-ghost" onclick="filtrar('ingenieria')">Ingeniería</button>
+<button class="btn btn-ghost" onclick="filtrar('mantencion')">Mantención</button>
+<button class="btn btn-ghost" onclick="filtrar('obras')">Obras</button>
+<button class="btn btn-ghost" onclick="filtrar('digital')">Digital</button>
+<button class="btn btn-ghost" onclick="filtrar('ambiental')">Medioambiente</button>
+</div>
+
+<div class="services-grid">
+
+<div class="service" data-cat="logistica">
+<h3>Gestión logística y transporte de carga</h3>
+<p class="small">Transporte nacional e internacional, distribución y almacenamiento de bienes.</p>
+</div>
+
+<div class="service" data-cat="ingenieria">
+<h3>Ingeniería multidisciplinaria</h3>
+<p class="small">Ingeniería civil, mecánica, eléctrica, electrónica, industrial y de procesos.</p>
+</div>
+
+<div class="service" data-cat="mantencion">
+<h3>Mantención industrial</h3>
+<p class="small">Mantención mecánica, eléctrica, electrónica, refrigeración y climatización.</p>
+</div>
+
+<div class="service" data-cat="obras">
+<h3>Obras y montaje industrial</h3>
+<p class="small">Ejecución de obras en sectores industrial, minero, portuario y construcción.</p>
+</div>
+
+<div class="service" data-cat="logistica">
+<h3>Mano de obra calificada</h3>
+<p class="small">Suministro de personal técnico y profesional.</p>
+</div>
+
+<div class="service" data-cat="ingenieria">
+<h3>Consultoría y gestión de proyectos</h3>
+<p class="small">Asesoría técnica, capacitación y gestión integral.</p>
+</div>
+
+<div class="service" data-cat="digital">
+<h3>Soluciones digitales y software</h3>
+<p class="small">Desarrollo web, aplicaciones, automatización y sistemas.</p>
+</div>
+
+<div class="service" data-cat="ambiental">
+<h3>Gestión de residuos</h3>
+<p class="small">Gestión, transporte y disposición final conforme a normativa.</p>
+</div>
+
+</div>
+</section>
+
+<section id="nosotros" class="card">
+<h2>Nosotros</h2>
+<p class="small">
+GLOMI SpA presta servicios técnicos integrales para la industria, energía y transporte,
+operando en terreno, en instalaciones del cliente o infraestructura propia, en Chile y el extranjero.
+</p>
+</section>
+
+<section id="contacto" class="card">
+<h2>Contacto</h2>
+
+<div class="form-container">
+<h3>Formulario de contacto</h3>
+<form action="https://docs.google.com/forms/d/e/1FAIpQLScRIYUSBz7jRD9M4Km50-NHvzs7Dd4Q8W9VdBNBZKkhbXq97w/formResponse" method="POST" target="_blank">
+<input name="entry.616770728" placeholder="Nombre" required>
+<input type="email" name="entry.1194134153" placeholder="Correo" required>
+<input name="entry.1620714692" placeholder="Teléfono" required>
+<input name="entry.87627891" placeholder="Servicio requerido" required>
+<textarea name="entry.212002692" placeholder="Mensaje" required></textarea>
+<button type="submit">Enviar</button>
+</form>
+</div>
+
+<p class="small" style="margin-top:16px">
+Contacto corporativo:<br>
+<strong><a href="mailto:contacto@glomi.cl" style="color:var(--accent)">contacto@glomi.cl</a></strong>
+</p>
+</section>
+
+<footer>
+<p class="small">
+© <span id="year"></span> Gestión Logística y Mantención Industrial GLOMI SpA.<br>
+Servicios prestados conforme a la normativa vigente. Operaciones en Chile y el extranjero.
+</p>
+</footer>
+
+<a href="https://wa.me/569XXXXXXXX" class="btn-whatsapp"></a>
+
+</div>
+
+<script>
+document.getElementById("year").textContent=new Date().getFullYear();
+function filtrar(cat){
+document.querySelectorAll(".service").forEach(s=>{
+s.style.display=(cat==="all"||s.dataset.cat===cat)?"block":"none";
+});
+}
+</script>
+
 </body>
 </html>
-
-
-
-
-
-
