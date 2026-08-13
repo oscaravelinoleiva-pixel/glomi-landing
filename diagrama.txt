@@ -1,1 +1,21 @@
 
+glomi.cl/
+├── index.html
+├── css/
+│   └── style.css
+├── js/
+│   ├── app.js
+│   └── galeria.js
+├── paginas/
+│   ├── inicio.html
+│   ├── servicios.html
+│   ├── nosotros.html
+│   ├── historia.html
+│   └── contacto.html
+└── img/
+    ├── historia/
+    │   ├── foto-01.jpg
+    │   ├── foto-02.jpg
+    │   ├── foto-03.jpg
+    │   └── ...
+    └── logo/
