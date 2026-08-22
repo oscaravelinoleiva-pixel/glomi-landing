@@ -1,183 +1,202 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
   
-<title>GLOMI | Servicios técnicos, logística, mantención industrial, soluciones digitales y automatización</title>
+
+<title>GLOMI | Venta Consultiva, Servicios técnicos, logística, mantención industrial, soluciones digitales y automatización</title>
+
 <meta name="description" content="GLOMI SpA presta servicios de logística, transporte de carga, mantención industrial, obras, ingeniería multidisciplinaria, soluciones digitales, automatización y gestión de proyectos en Chile y el extranjero.">
+
 <meta name="keywords" content="logística industrial, transporte de carga, mantención industrial, ingeniería eléctrica, ingeniería mecánica, obras industriales, automatización, servicios técnicos, servicios técnicos, ingeniería aplicada, mantención industrial, automatización, soldadura, electrónica, energía, Chile, GLOMI">
+
 <meta name="author" content="Gestión Logística y Mantención Industrial GLOMI SpA">
 
+
+
 <meta name="robots" content="index, follow">
+
 <meta name="googlebot" content="index, follow">
+
 <link rel="canonical" href="https://glomi.cl/">
+
 <link rel="sitemap" type="application/xml" title="Sitemap" href="https://glomi.cl/sitemap.xml">
 
 
+
+
+
 <meta property="og:type" content="website">
+
 <meta property="og:title" content="GLOMI | Ingeniería aplicada y servicios técnicos">
+
 <meta property="og:description" content="Soluciones técnicas e ingeniería aplicada para proyectos industriales, energéticos y tecnológicos en Chile.">
+
 <meta property="og:url" content="https://glomi.cl/">
+
 <meta property="og:site_name" content="GLOMI">
+
   
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="styles/style-index.css">
+<link rel="stylesheet" href="styles/servicios.css">
+<link rel="stylesheet" href="styles/detalle-servocio.css">
 </head>
 
 <body>
-<div class="container">
 
-<header>
-<div class="brand">
-<div class="logo">GLOMI</div>
-<div>
-<strong>Gestión Logística y Mantención Industrial GLOMI SpA</strong>
-<div class="small">Servicios técnicos integrales</div>
-</div>
-</div>
-<nav>
-<a href="#servicios">Servicios</a>
-<a href="#nosotros">Nosotros</a>
-<a href="#contacto">Contacto</a>
-</nav>
+
+<!-- ==================================================
+     HEADER PERMANENTE
+================================================== -->
+
+<header class="site-header">
+
+    <div class="container header-inner">
+
+
+        <a href="#inicio"
+           class="brand"
+           data-page="inicio">
+
+            <span class="logo">
+                GLOMI
+            </span>
+
+            <span class="brand-text">
+
+                <strong>
+                    Gestión Logística y Mantención Industrial
+                </strong>
+
+                <small>
+                    Servicios técnicos integrales
+                </small>
+
+            </span>
+
+        </a>
+
+
+        <nav class="main-nav">
+
+
+            <a href="#inicio"
+               data-page="inicio">
+                Inicio
+            </a>
+
+
+            <a href="#servicios"
+               data-page="servicios">
+                Servicios
+            </a>
+
+
+            <a href="#nosotros"
+               data-page="nosotros">
+                Nosotros
+            </a>
+
+        <!--   <a href="#historia" data-page="historia">
+             Historia
+            </a>
+     
+            <a href="#contacto"
+               data-page="contacto">
+                Contacto
+            </a>
+            
+            <a href="admin/index.html" class="btn">
+            Administración
+            </a>
+        -->
+        </nav>
+
+
+        <button class="menu-toggle"
+                id="menuToggle"
+                type="button">
+
+            ☰
+
+        </button>
+
+
+    </div>
+
 </header>
 
-<section class="hero">
-<div class="card">
-<h1>Soluciones técnicas, logísticas y de ingeniería</h1>
-<p class="lead">
-Prestamos servicios de logística, transporte, ingeniería, mantención industrial, obras,
-operación técnica, soluciones digitales y gestión de proyectos, en Chile y el extranjero.
-</p>
-<a href="#contacto" class="btn btn-primary">Solicitar propuesta</a>
-</div>
 
-<div class="card">
-<h3>Propuesta de valor</h3>
-<p class="small">
-Ejecutamos servicios con foco en seguridad, continuidad operacional y cumplimiento normativo,
-operando de forma directa o asociada a terceros.
-</p>
-</div>
-</section>
 
-<section id="servicios" class="card">
-<h2>Portafolio de Servicios</h2>
+<!-- ==================================================
+     CONTENIDO DINÁMICO
+================================================== -->
 
-<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px">
-<button class="btn btn-ghost" onclick="filtrar('all')">Todos</button>
-<button class="btn btn-ghost" onclick="filtrar('logistica')">Logística</button>
-<button class="btn btn-ghost" onclick="filtrar('ingenieria')">Ingeniería</button>
-<button class="btn btn-ghost" onclick="filtrar('mantencion')">Mantención</button>
-<button class="btn btn-ghost" onclick="filtrar('obras')">Obras</button>
-<button class="btn btn-ghost" onclick="filtrar('digital')">Digital</button>
-<button class="btn btn-ghost" onclick="filtrar('ambiental')">Medioambiente</button>
-</div>
+<main id="app">
 
-<div class="services-grid">
+    <!--
+        Aquí se cargan los archivos HTML
+        de la carpeta /paginas/
+    -->
 
-<div class="service" data-cat="logistica">
-<h3>Gestión logística y transporte de carga</h3>
-<p class="small">Transporte nacional e internacional, distribución y almacenamiento de bienes.</p>
-</div>
+</main>
 
-<div class="service" data-cat="ingenieria">
-<h3>Ingeniería multidisciplinaria</h3>
-<p class="small">Ingeniería civil, mecánica, eléctrica, electrónica, industrial y de procesos.</p>
-</div>
 
-<div class="service" data-cat="mantencion">
-<h3>Mantención industrial</h3>
-<p class="small">Mantención mecánica, eléctrica, electrónica, refrigeración y climatización.</p>
-</div>
 
-<div class="service" data-cat="obras">
-<h3>Obras y montaje industrial</h3>
-<p class="small">Ejecución de obras en sectores industrial, minero, portuario y construcción.</p>
-</div>
+<!-- ==================================================
+     FOOTER PERMANENTE
+================================================== -->
 
-<div class="service" data-cat="logistica">
-<h3>Mano de obra calificada</h3>
-<p class="small">Suministro de personal técnico y profesional.</p>
-</div>
+<footer class="site-footer">
 
-<div class="service" data-cat="ingenieria">
-<h3>Consultoría y gestión de proyectos</h3>
-<p class="small">Asesoría técnica, capacitación y gestión integral.</p>
-</div>
+    <div class="container footer-content">
 
-<div class="service" data-cat="digital">
-<h3>Soluciones digitales y software</h3>
-<p class="small">Desarrollo web, aplicaciones, automatización y sistemas.</p>
-</div>
+        <div>
 
-<div class="service" data-cat="ambiental">
-<h3>Gestión de residuos</h3>
-<p class="small">Gestión, transporte y disposición final conforme a normativa.</p>
-</div>
+            <strong>
+                GLOMI SpA
+            </strong>
 
-</div>
-</section>
+            <p>
+                Gestión Logística y Mantención Industrial
+            </p>
 
-<section id="nosotros" class="card">
-<h2>Nosotros</h2>
-<p class="small">
-GLOMI SpA presta servicios técnicos integrales para la industria, energía y transporte,
-operando en terreno, en instalaciones del cliente o infraestructura propia, en Chile y el extranjero.
-</p>
-</section>
+        </div>
 
-<section id="contacto" class="card">
-<h2>Contacto</h2>
 
-<div class="form-container">
-<h3>Formulario de contacto</h3>
-<form action="https://docs.google.com/forms/d/e/1FAIpQLScRIYUSBz7jRD9M4Km50-NHvzs7Dd4Q8W9VdBNBZKkhbXq97w/formResponse" method="POST" target="_blank">
-<input name="entry.616770728" placeholder="Nombre" required>
-<input type="email" name="entry.1194134153" placeholder="Correo" required>
-<input name="entry.1620714692" placeholder="Teléfono" required>
-<input name="entry.87627891" placeholder="Servicio requerido" required>
-<textarea name="entry.212002692" placeholder="Mensaje" required></textarea>
-<button type="submit">Enviar</button>
-</form>
-</div>
+        <div>
 
-<p class="small" style="margin-top:16px">
-Contacto corporativo:<br>
-<strong><a href="mailto:contacto@glomi.cl" style="color:var(--accent)">contacto@glomi.cl</a></strong>
-</p>
-</section>
+            <p>
+                Soluciones técnicas con enfoque consultivo.
+            </p>
 
-<footer>
-<p class="small">
-© <span id="year"></span> Gestión Logística y Mantención Industrial GLOMI SpA.<br>
-Servicios prestados conforme a la normativa vigente. Operaciones en Chile y el extranjero.
-</p>
+            <p>
+                © <span id="year"></span> GLOMI SpA
+            </p>
+
+        </div>
+
+    </div>
+
 </footer>
-
-
-
-</div>
-
-<script>
-document.getElementById("year").textContent=new Date().getFullYear();
-function filtrar(cat){
-document.querySelectorAll(".service").forEach(s=>{
-s.style.display=(cat==="all"||s.dataset.cat===cat)?"block":"none";
-});
-}
-</script>
-
-</body>
+<script src="js/parametros/electricidad.js"></script>
+<script src="js/parametros/mecanica.js"></script>
+<script src="js/parametros/soldadura.js"></script>
+<script src="js/parametros/mantenimiento-industrial.js"></script>
+<script src="js/parametros/mineria.js"></script>
+<script src="js/parametros/logistica.js"></script>
+<script src="js/parametros/residuos.js"></script>
+<script src="js/parametros-servicios.js"></script>
+<script src="js/parametros/generador-parametros.js"></script>
+<script src="js/solicitar-servicio.js"></script>
+<script src="js/navegacion.js"></script>
+<script src="js/app.js"></script>
 </html>
-
-
-
-
-
