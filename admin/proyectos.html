@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta name="robots" content="noindex, nofollow">
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>GLOMI | Proyectos</title>
+
+    <link
+        rel="stylesheet"
+        href="css/admin.css">
+
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+
+    <aside class="sidebar">
+
+        <div class="admin-logo">
+            GLOMI
+        </div>
+
+        <div class="admin-subtitle">
+            Panel de administración
+        </div>
+
+
+        <nav class="admin-nav">
+
+            <a href="index.html">
+                <span>▦</span>
+                Dashboard
+            </a>
+
+            <a href="usuarios.html">
+                <span>👥</span>
+                Usuarios
+            </a>
+
+            <a href="perfiles.html">
+                <span>👤</span>
+                Perfiles
+            </a>
+
+            <a
+                href="proyectos.html"
+                class="active">
+
+                <span>📁</span>
+                Proyectos
+
+            </a>
+
+            <a href="galeria.html">
+                <span>🖼</span>
+                Galería
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="../index.html">
+                Ver sitio web
+            </a>
+
+            <button id="logoutButton">
+                Cerrar sesión
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <main class="admin-main">
+
+
+        <header class="admin-header">
+
+            <div>
+
+                <h1>
+                    Proyectos
+                </h1>
+
+                <p>
+                    Historial de proyectos y trabajos realizados
+                </p>
+
+            </div>
+
+
+            <button
+                class="btn btn-primary"
+                id="nuevoProyecto">
+
+                + Nuevo proyecto
+
+            </button>
+
+        </header>
+
+
+        <section
+            class="projects-grid"
+            id="projectsGrid">
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<!-- MODAL -->
+
+<div
+    class="modal"
+    id="proyectoModal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2>
+                Nuevo proyecto
+            </h2>
+
+            <button
+                class="modal-close"
+                data-close-modal>
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <form id="proyectoForm">
+
+
+            <div class="form-group">
+
+                <label>
+                    Nombre del proyecto
+                </label>
+
+                <input
+                    type="text"
+                    id="proyectoNombre"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Cliente
+                </label>
+
+                <input
+                    type="text"
+                    id="proyectoCliente">
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Categoría
+                </label>
+
+                <select id="proyectoCategoria">
+
+                    <option value="Ingeniería">
+                        Ingeniería
+                    </option>
+
+                    <option value="Mantención">
+                        Mantención
+                    </option>
+
+                    <option value="Logística">
+                        Logística
+                    </option>
+
+                    <option value="Obras">
+                        Obras
+                    </option>
+
+                    <option value="Digital">
+                        Digital
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Fecha
+                </label>
+
+                <input
+                    type="date"
+                    id="proyectoFecha">
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Descripción
+                </label>
+
+                <textarea
+                    id="proyectoDescripcion"></textarea>
+
+            </div>
+
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-close-modal>
+
+                    Cancelar
+
+                </button>
+
+                <button
+                    type="submit"
+                    class="btn btn-primary">
+
+                    Guardar proyecto
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script src="js/admin.js"></script>
+
+</body>
+
+</html>

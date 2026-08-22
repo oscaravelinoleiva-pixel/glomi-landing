@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>GLOMI | Administración</title>
+
+    <link
+        rel="stylesheet"
+        href="css/admin.css">
+
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="admin-logo">
+            GLOMI
+        </div>
+
+        <div class="admin-subtitle">
+            Panel de administración
+        </div>
+
+
+        <nav class="admin-nav">
+
+            <a
+                href="index.html"
+                class="active">
+
+                <span>▦</span>
+                Dashboard
+
+            </a>
+
+
+            <a href="usuarios.html">
+
+                <span>👥</span>
+                Usuarios
+
+            </a>
+
+
+            <a href="perfiles.html">
+
+                <span>👤</span>
+                Perfiles
+
+            </a>
+
+
+            <a href="proyectos.html">
+
+                <span>📁</span>
+                Proyectos
+
+            </a>
+
+
+            <a href="galeria.html">
+
+                <span>🖼</span>
+                Galería
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a
+                href="../index.html"
+                target="_blank">
+
+                Ver sitio web
+
+            </a>
+
+            <button
+                id="logoutButton">
+
+                Cerrar sesión
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- CONTENIDO -->
+
+    <main class="admin-main">
+
+
+        <header class="admin-header">
+
+            <div>
+
+                <h1>
+                    Dashboard
+                </h1>
+
+                <p>
+                    Administración de GLOMI SpA
+                </p>
+
+            </div>
+
+
+            <div class="admin-user">
+
+                <div class="avatar">
+                    A
+                </div>
+
+                <div>
+
+                    <strong>
+                        Administrador
+                    </strong>
+
+                    <small>
+                        Administrador
+                    </small>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ESTADÍSTICAS -->
+
+        <section class="stats-grid">
+
+
+            <div class="stat-card">
+
+                <span class="stat-icon">
+                    👥
+                </span>
+
+                <div>
+
+                    <span class="stat-label">
+                        Usuarios
+                    </span>
+
+                    <strong
+                        id="totalUsuarios">
+
+                        0
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span class="stat-icon">
+                    👤
+                </span>
+
+                <div>
+
+                    <span class="stat-label">
+                        Perfiles
+                    </span>
+
+                    <strong
+                        id="totalPerfiles">
+
+                        0
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span class="stat-icon">
+                    📁
+                </span>
+
+                <div>
+
+                    <span class="stat-label">
+                        Proyectos
+                    </span>
+
+                    <strong
+                        id="totalProyectos">
+
+                        0
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span class="stat-icon">
+                    🖼
+                </span>
+
+                <div>
+
+                    <span class="stat-label">
+                        Fotografías
+                    </span>
+
+                    <strong
+                        id="totalFotos">
+
+                        0
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ACCIONES -->
+
+        <section class="panel">
+
+            <div class="panel-header">
+
+                <div>
+
+                    <h2>
+                        Acciones rápidas
+                    </h2>
+
+                    <p>
+                        Administración del contenido de GLOMI
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="quick-actions">
+
+
+                <a
+                    href="usuarios.html"
+                    class="quick-action">
+
+                    <strong>
+                        Gestionar usuarios
+                    </strong>
+
+                    <span>
+                        Crear y administrar cuentas
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="perfiles.html"
+                    class="quick-action">
+
+                    <strong>
+                        Gestionar perfiles
+                    </strong>
+
+                    <span>
+                        Técnicos y profesionales
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="proyectos.html"
+                    class="quick-action">
+
+                    <strong>
+                        Gestionar proyectos
+                    </strong>
+
+                    <span>
+                        Historial y proyectos realizados
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="galeria.html"
+                    class="quick-action">
+
+                    <strong>
+                        Gestionar galería
+                    </strong>
+
+                    <span>
+                        Fotografías y álbumes
+                    </span>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<script src="js/admin.js"></script>
+
+</body>
+
+</html>

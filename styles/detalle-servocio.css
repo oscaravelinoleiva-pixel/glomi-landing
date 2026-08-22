@@ -1,0 +1,367 @@
+/* =========================================================
+   GLOMI - DETALLE DE SERVICIO
+========================================================= */
+
+.detalle-servicio {
+    padding: 70px 0;
+}
+
+
+/* =========================================================
+   ENCABEZADO
+========================================================= */
+
+.detalle-header {
+    max-width: 900px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.detalle-header .section-tag {
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.detalle-header h1 {
+    margin: 0 0 18px;
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.1;
+}
+
+.detalle-header p {
+    max-width: 760px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   GRID PRINCIPAL
+========================================================= */
+
+.detalle-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 45px;
+    align-items: start;
+}
+
+
+/* =========================================================
+   CONTENIDO
+========================================================= */
+
+.detalle-contenido {
+    line-height: 1.7;
+}
+
+.detalle-contenido h2 {
+    margin-top: 35px;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.detalle-contenido h2:first-child {
+    margin-top: 0;
+}
+
+.detalle-contenido p {
+    margin-bottom: 18px;
+}
+
+.detalle-contenido ul {
+    padding-left: 22px;
+}
+
+.detalle-contenido li {
+    margin-bottom: 9px;
+}
+
+
+/* =========================================================
+   TARJETAS DE INFORMACIÓN
+========================================================= */
+
+.detalle-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.detalle-info-card {
+    padding: 22px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.detalle-info-card h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+.detalle-info-card p {
+    margin: 0;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.detalle-sidebar {
+    position: sticky;
+    top: 25px;
+}
+
+.solicitar-card {
+    padding: 28px;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+}
+
+.solicitar-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.solicitar-card p {
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   BOTONES
+========================================================= */
+
+.detalle-botones {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.detalle-botones .btn {
+    width: 100%;
+    text-align: center;
+}
+
+
+/* =========================================================
+   WHATSAPP
+========================================================= */
+
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   GALERÍA DEL SERVICIO
+========================================================= */
+
+.servicio-galeria {
+    margin-top: 45px;
+}
+
+.servicio-galeria h2 {
+    margin-bottom: 20px;
+}
+
+.servicio-galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.servicio-galeria-item {
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+    border-radius: 10px;
+}
+
+.servicio-galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .3s ease;
+}
+
+.servicio-galeria-item:hover img {
+    transform: scale(1.05);
+}
+
+
+/* =========================================================
+   SOLICITUD
+========================================================= */
+
+.solicitud-section {
+    padding: 70px 0;
+}
+
+.solicitud-header {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.solicitud-header h1 {
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   FORMULARIO
+========================================================= */
+
+.solicitud-form {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 35px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, .07);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font: inherit;
+    background: #fff;
+}
+
+.form-group textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: currentColor;
+}
+
+
+/* =========================================================
+   ARCHIVOS
+========================================================= */
+
+.form-help {
+    font-size: 13px;
+    opacity: .7;
+}
+
+.form-submit {
+    margin-top: 25px;
+}
+
+
+/* =========================================================
+   MENSAJE
+========================================================= */
+
+.form-message {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.form-message.active {
+    display: block;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .detalle-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .detalle-sidebar {
+        position: static;
+    }
+
+    .servicio-galeria-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .detalle-servicio {
+        padding: 45px 0;
+    }
+
+    .detalle-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .servicio-galeria-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .solicitud-form {
+        padding: 22px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+}
+
+.form-message--warning {
+    display: block;
+    margin-top: 1rem;
+    color: #7a4b00;
+}

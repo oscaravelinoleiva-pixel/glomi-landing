@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>GLOMI | Perfiles</title>
+
+    <link
+        rel="stylesheet"
+        href="css/admin.css">
+
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+
+    <aside class="sidebar">
+
+        <div class="admin-logo">
+            GLOMI
+        </div>
+
+        <div class="admin-subtitle">
+            Panel de administración
+        </div>
+
+
+        <nav class="admin-nav">
+
+            <a href="index.html">
+                <span>▦</span>
+                Dashboard
+            </a>
+
+            <a href="usuarios.html">
+                <span>👥</span>
+                Usuarios
+            </a>
+
+            <a
+                href="perfiles.html"
+                class="active">
+
+                <span>👤</span>
+                Perfiles
+
+            </a>
+
+            <a href="proyectos.html">
+                <span>📁</span>
+                Proyectos
+            </a>
+
+            <a href="galeria.html">
+                <span>🖼</span>
+                Galería
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="../index.html">
+                Ver sitio web
+            </a>
+
+            <button id="logoutButton">
+                Cerrar sesión
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <main class="admin-main">
+
+
+        <header class="admin-header">
+
+            <div>
+
+                <h1>
+                    Perfiles profesionales
+                </h1>
+
+                <p>
+                    Administración del equipo GLOMI
+                </p>
+
+            </div>
+
+
+            <button
+                class="btn btn-primary"
+                id="nuevoPerfil">
+
+                + Nuevo perfil
+
+            </button>
+
+        </header>
+
+
+        <section class="profiles-grid"
+                 id="profilesGrid">
+
+            <!-- perfiles cargados mediante JS -->
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<!-- MODAL PERFIL -->
+
+<div
+    class="modal"
+    id="perfilModal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2>
+                Nuevo perfil
+            </h2>
+
+            <button
+                class="modal-close"
+                data-close-modal>
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <form id="perfilForm">
+
+
+            <div class="form-group">
+
+                <label>
+                    Nombre completo
+                </label>
+
+                <input
+                    type="text"
+                    id="perfilNombre"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Cargo
+                </label>
+
+                <input
+                    type="text"
+                    id="perfilCargo"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Especialidad
+                </label>
+
+                <input
+                    type="text"
+                    id="perfilEspecialidad"
+                    placeholder="Ej: Electricidad industrial">
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Biografía
+                </label>
+
+                <textarea
+                    id="perfilBio"></textarea>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Fotografía
+                </label>
+
+                <input
+                    type="file"
+                    id="perfilFoto"
+                    accept="image/*">
+
+            </div>
+
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-close-modal>
+
+                    Cancelar
+
+                </button>
+
+                <button
+                    type="submit"
+                    class="btn btn-primary">
+
+                    Guardar perfil
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script src="js/admin.js"></script>
+
+</body>
+
+</html>

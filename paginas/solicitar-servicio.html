@@ -1,0 +1,454 @@
+<section class="solicitud-section">
+
+    <div class="container">
+
+        <div class="solicitud-header">
+
+            <span class="section-tag">
+                SOLICITUD DE SERVICIO
+            </span>
+
+            <h1>
+                Cuéntanos qué necesitas
+            </h1>
+
+            <p>
+                Completa el formulario y podremos
+                evaluar tu requerimiento técnico.
+            </p>
+
+        </div>
+
+
+        <form
+            id="solicitudServicioForm"
+            class="solicitud-form">
+
+            <div class="form-grid">
+
+
+                <!-- CLIENTE -->
+
+                <div class="form-group">
+
+                    <label for="nombre">
+                        Nombre / Empresa
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        required>
+
+                </div>
+
+
+                <!-- CONTACTO -->
+
+                <div class="form-group">
+
+                    <label for="telefono">
+                        Teléfono
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="telefono"
+                        name="telefono"
+                        placeholder="+56 9..."
+                        required>
+
+                </div>
+
+
+                <!-- CORREO -->
+
+                <div class="form-group">
+
+                    <label for="correo">
+                        Correo electrónico
+                    </label>
+
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        required>
+
+                </div>
+
+
+                <!-- TIPO CLIENTE -->
+
+                <div class="form-group">
+
+                    <label for="tipoCliente">
+                        Tipo de cliente
+                    </label>
+
+                    <select
+                        id="tipoCliente"
+                        name="tipoCliente"
+                        required>
+
+                        <option value="">
+                            Seleccionar
+                        </option>
+
+                        <option value="particular">
+                            Particular
+                        </option>
+
+                        <option value="empresa">
+                            Empresa
+                        </option>
+
+                        <option value="industria">
+                            Industria
+                        </option>
+
+                        <option value="mineria">
+                            Minería
+                        </option>
+
+                        <option value="construccion">
+                            Construcción
+                        </option>
+
+                        <option value="agricola">
+                            Agrícola
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- SERVICIO -->
+
+                <div class="form-group full">
+
+                    <label for="servicio">
+                        Servicio requerido
+                    </label>
+
+                    <select
+                        id="servicio"
+                        name="servicio"
+                        required>
+                        <option value="">
+                            Seleccionar servicio
+                        </option>
+
+                        <optgroup label="Electricidad">
+
+                            <option value="instalaciones-electricas">
+                                Instalaciones eléctricas
+                            </option>
+
+                            <option value="mantencion-electrica">
+                                Mantención eléctrica
+                            </option>
+
+                            <option value="diagnostico-fallas">
+                                Diagnóstico de fallas
+                            </option>
+
+                            <option value="tableros-electricos">
+                                Tableros eléctricos
+                            </option>
+
+                        </optgroup>
+
+
+                        <optgroup label="Mecánica">
+
+                            <option value="camiones">
+                                Camiones
+                            </option>
+
+                            <option value="maquinaria-pesada">
+                                Maquinaria pesada
+                            </option>
+
+                            <option value="mantencion-preventiva">
+                                Mantención preventiva
+                            </option>
+
+                            <option value="diagnostico-mecanico">
+                                Diagnóstico mecánico
+                            </option>
+
+                            <option value="electromecanica">
+                                Electromecánica
+                            </option>
+
+                        </optgroup>
+
+
+                        <optgroup label="Soldadura">
+
+                            <option value="estructuras-metalicas">
+                                Estructuras metálicas
+                            </option>
+
+                            <option value="soldadura-industrial">
+                                Soldadura industrial
+                            </option>
+
+                            <option value="reparaciones">
+                                Reparaciones
+                            </option>
+
+                        </optgroup>
+
+
+                        <optgroup label="Mantenimiento industrial">
+
+                            <option value="mantenimiento-preventivo">
+                                Mantenimiento preventivo
+                            </option>
+
+                            <option value="mantenimiento-correctivo">
+                                Mantenimiento correctivo
+                            </option>
+
+                            <option value="emergencias">
+                                Emergencias
+                            </option>
+
+                        </optgroup>
+
+
+                        <optgroup label="Logística">
+
+                            <option value="transporte-carga">
+                                Transporte de carga
+                            </option>
+
+                            <option value="coordinacion-logistica">
+                                Coordinación logística
+                            </option>
+
+                            <option value="apoyo-bodega">
+                                Apoyo de bodega y despacho
+                            </option>
+
+                        </optgroup>
+
+
+                        <optgroup label="Gestión de residuos">
+
+                            <option value="gestion-residuos">
+                                Gestión de residuos
+                            </option>
+
+                            <option value="retiro-residuos">
+                                Retiro de residuos
+                            </option>
+
+                            <option value="disposicion-final">
+                                Disposición final
+                            </option>
+
+                        </optgroup>
+
+
+                        <optgroup label="Minería">
+
+                            <option value="mantencion-minera">
+                                Mantención minera
+                            </option>
+
+                            <option value="mecanica">
+                                Mecánica
+                            </option>
+
+                            <option value="electricidad">
+                                Electricidad
+                            </option>
+
+                            <option value="servicios-en-terreno">
+                                Servicios en terreno
+                            </option>
+
+                        </optgroup>
+                    
+                    </select>
+
+                    <div
+                        id="parametrosServicio"
+                        class="parametros-servicio"
+                        aria-live="polite">
+                    </div>
+
+                </div>
+
+
+                <!-- UBICACIÓN -->
+
+                <div class="form-group full">
+
+                    <label for="ubicacion">
+                        Ubicación del trabajo
+                    </label>
+
+                    <input
+                        type="text"
+                        id="ubicacion"
+                        name="ubicacion"
+                        placeholder="Comuna, ciudad o faena"
+                        required>
+
+                </div>
+
+
+                <!-- FECHA -->
+
+                <div class="form-group">
+
+                    <label for="fecha">
+                        Fecha requerida
+                    </label>
+
+                    <input
+                        type="date"
+                        id="fecha"
+                        name="fecha">
+
+                </div>
+
+
+                <!-- URGENCIA -->
+
+                <div class="form-group">
+
+                    <label for="urgencia">
+                        Prioridad
+                    </label>
+
+                    <select
+                        id="urgencia"
+                        name="urgencia">
+
+                        <option value="normal">
+                            Normal
+                        </option>
+
+                        <option value="prioritaria">
+                            Prioritaria
+                        </option>
+
+                        <option value="urgente">
+                            Urgente
+                        </option>
+
+                        <option value="emergencia">
+                            Emergencia
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- DESCRIPCIÓN -->
+
+                <div class="form-group full">
+
+                    <label for="descripcion">
+                        Descripción del trabajo
+                    </label>
+
+                    <textarea
+                        id="descripcion"
+                        name="descripcion"
+                        placeholder="Describe la falla, trabajo requerido, equipo, condiciones del lugar, etc."
+                        required></textarea>
+
+                </div>
+
+
+                <!-- EQUIPO -->
+
+                <div class="form-group">
+
+                    <label for="equipo">
+                        Equipo / maquinaria
+                    </label>
+
+                    <input
+                        type="text"
+                        id="equipo"
+                        name="equipo"
+                        placeholder="Ej: Camión, excavadora, tablero, motor...">
+
+                </div>
+
+
+                <!-- MODELO -->
+
+                <div class="form-group">
+
+                    <label for="modelo">
+                        Marca / modelo
+                    </label>
+
+                    <input
+                        type="text"
+                        id="modelo"
+                        name="modelo">
+
+                </div>
+
+
+                <!-- ARCHIVOS -->
+
+                <div class="form-group full">
+
+                    <label for="archivos">
+                        Fotografías o documentos
+                    </label>
+
+                    <input
+                        type="file"
+                        id="archivos"
+                        name="archivos"
+                        multiple
+                        accept="image/*,.pdf">
+
+                    <span class="form-help">
+                        Puedes adjuntar fotografías de la
+                        falla, equipo o lugar de trabajo.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="form-submit">
+
+                <button
+                    type="submit"
+                    class="btn btn-primary">
+
+                    Enviar solicitud
+
+                </button>
+
+            </div>
+
+
+            <div
+                id="formMessage"
+                class="form-message">
+
+            </div>
+
+        </form>
+
+    </div>
+
+</section>

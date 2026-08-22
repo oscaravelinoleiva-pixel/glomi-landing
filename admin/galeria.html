@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta name="robots" content="noindex, nofollow">
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>GLOMI | Galería</title>
+
+    <link
+        rel="stylesheet"
+        href="css/admin.css">
+
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+
+    <aside class="sidebar">
+
+        <div class="admin-logo">
+            GLOMI
+        </div>
+
+        <div class="admin-subtitle">
+            Panel de administración
+        </div>
+
+
+        <nav class="admin-nav">
+
+            <a href="index.html">
+                <span>▦</span>
+                Dashboard
+            </a>
+
+            <a href="usuarios.html">
+                <span>👥</span>
+                Usuarios
+            </a>
+
+            <a href="perfiles.html">
+                <span>👤</span>
+                Perfiles
+            </a>
+
+            <a href="proyectos.html">
+                <span>📁</span>
+                Proyectos
+            </a>
+
+            <a
+                href="galeria.html"
+                class="active">
+
+                <span>🖼</span>
+                Galería
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="../index.html">
+                Ver sitio web
+            </a>
+
+            <button id="logoutButton">
+                Cerrar sesión
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <main class="admin-main">
+
+
+        <header class="admin-header">
+
+            <div>
+
+                <h1>
+                    Galería
+                </h1>
+
+                <p>
+                    Administración de fotografías y álbumes
+                </p>
+
+            </div>
+
+
+            <button
+                class="btn btn-primary"
+                id="nuevaFoto">
+
+                + Agregar fotografía
+
+            </button>
+
+        </header>
+
+
+        <section class="gallery-admin"
+                 id="galleryAdmin">
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<!-- MODAL -->
+
+<div
+    class="modal"
+    id="fotoModal">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2>
+                Agregar fotografía
+            </h2>
+
+            <button
+                class="modal-close"
+                data-close-modal>
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <form id="fotoForm">
+
+
+            <div class="form-group">
+
+                <label>
+                    Fotografía
+                </label>
+
+                <input
+                    type="file"
+                    id="fotoArchivo"
+                    accept="image/*"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Título
+                </label>
+
+                <input
+                    type="text"
+                    id="fotoTitulo"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Proyecto
+                </label>
+
+                <select id="fotoProyecto">
+
+                    <option>
+                        Seleccionar proyecto
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>
+                    Descripción
+                </label>
+
+                <textarea
+                    id="fotoDescripcion"></textarea>
+
+            </div>
+
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-close-modal>
+
+                    Cancelar
+
+                </button>
+
+                <button
+                    type="submit"
+                    class="btn btn-primary">
+
+                    Guardar fotografía
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script src="js/admin.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+/* Parámetros para solicitudes de mecánica. */
+const parametrosMecanica = {
+    "camiones": { campos: [{ tipo: "text", nombre: "tipoCamion", etiqueta: "Tipo de camión", placeholder: "Ej: tolva, rampla, aljibe" }, { tipo: "text", nombre: "marcaModelo", etiqueta: "Marca y modelo", placeholder: "Ej: Volvo FMX" }, { tipo: "textarea", nombre: "fallaMecanica", etiqueta: "Falla o trabajo requerido", placeholder: "Describe el síntoma o reparación" }] },
+    "maquinaria-pesada": { campos: [{ tipo: "text", nombre: "tipoMaquinaria", etiqueta: "Tipo de maquinaria", placeholder: "Ej: excavadora, cargador frontal" }, { tipo: "text", nombre: "marcaModelo", etiqueta: "Marca y modelo" }, { tipo: "textarea", nombre: "fallaMecanica", etiqueta: "Falla o trabajo requerido", placeholder: "Describe el síntoma o reparación" }] },
+    "mantencion-preventiva": { campos: [{ tipo: "text", nombre: "equipoMantencion", etiqueta: "Equipo a mantener" }, { tipo: "select", nombre: "frecuenciaMantencion", etiqueta: "Frecuencia requerida", opciones: ["Única vez", "Mensual", "Trimestral", "Semestral", "Anual"] }] },
+    "diagnostico-mecanico": { campos: [{ tipo: "text", nombre: "equipoDiagnostico", etiqueta: "Equipo o vehículo" }, { tipo: "textarea", nombre: "sintomas", etiqueta: "Síntomas observados", placeholder: "Ruidos, vibraciones, pérdida de potencia, etc." }] },
+    "electromecanica": { campos: [{ tipo: "text", nombre: "equipoElectromecanico", etiqueta: "Equipo o sistema" }, { tipo: "textarea", nombre: "requerimientoElectromecanico", etiqueta: "Requerimiento técnico", placeholder: "Describe el trabajo requerido" }] }
+};
